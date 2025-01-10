@@ -21,3 +21,5 @@ Secciones:
 Componentes generales:
 - Barra de navegación
 - Barra de progreso
+- Traducción del sitio EN/ES
+- Modo Oscuro / Claro
