@@ -34,6 +34,7 @@ h1,h2,h3{
     --certificated-bg-color:#16181A;
     --text-color:#FFFFFF;
     --scroll: 0%;
+    --shadow-primary:rgba(200, 239, 82, 0.5);
 }
 
 .layout {
@@ -197,6 +198,7 @@ button{
     align-items: center;
     width: 125px;
     height: 40px;
+    transition: box-shadow 0.5s ease, background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
 }
 
 .button-primary{
@@ -208,6 +210,23 @@ button{
     background-color: var(--bg-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
+}
+
+.button-primary:hover{
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  -webkit-box-shadow: 0px 3px 10px 0px var(--shadow-primary);
+  -moz-box-shadow: 0px 3px 10px 0px var(--shadow-primary);
+  box-shadow: 0px 3px 10px 0px var(--shadow-primary);
+}
+
+.button-secondary:hover{
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 0px var(--primary-color);
+  -webkit-box-shadow: 0px 3px 10px 0px var(--shadow-primary);
+  -moz-box-shadow: 0px 3px 10px 0px var(--shadow-primary);
+  box-shadow: 0px 3px 10px 0px var(--shadow-primary);
 }
 
 /*TECHNOLOGIES*/
