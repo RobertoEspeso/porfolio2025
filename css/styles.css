@@ -74,13 +74,24 @@ h1,h2,h3{
   height: 70px;
   z-index: 1;
   bottom: 20px;
-  background-color: var(--card-bg-color);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .navbar__list{
 display: flex;
 justify-content: space-around;
 height: 100%;
+}
+
+.navbar__list__bg{
+  position: relative;
+  top: -70px;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(13.5px);
 }
 
 .navbar__item{
@@ -133,7 +144,7 @@ height: 100%;
     align-items: center;
     margin-top: 2rem;
     gap: 2rem;
-    height: 2000px;
+    /* height: 2000px; */
 }
 
 .home__container{
@@ -350,5 +361,65 @@ button{
   }
 
 /*EXPERIENCE*/
+.experience{
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.experience__container{
+  padding: 10px 50px;
+  position: relative;
+  /* width:50%; */
+}
+.point{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+  left: -10px;
+  top: 102px;
+  z-index: 1;
+  background-color: var(--bg-color);
+}
+.point-focus{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: -15px;
+  top: 102px;
+  z-index: 1;
+  background-color: var(--primary-color);
+}
+
+.timeline{
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: rgb(22,24,26);
+  background: linear-gradient(0deg, rgba(22,24,26,0) 0%, rgba(48,64,0,1) 20%, rgba(48,64,0,1) 50%, rgba(48,64,0,1) 80%, rgba(22,24,26,0) 100%);
+  top: 0;
+  left: 48px;
+  z-index: 1;
+}
+.experience__card{
+  display: flex;
+    flex-direction: column;
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.experience__card small{
+  color: var(--primary-color);
+}
+
+.experience__company{
+  max-width: 150px;
+}
 
 
