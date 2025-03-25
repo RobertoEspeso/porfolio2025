@@ -20,10 +20,17 @@ body{
 h1,h2,h3{
     font-weight: 700;
     color: var(--primary-color);
+    text-wrap: balance;
   }
-  h4,p,a,span{
+  h4{
     color: var(--text-color);
     font-weight: 400;
+    text-wrap: balance;
+  }
+  p,a,span{
+    color: var(--text-color);
+    font-weight: 400;
+    text-wrap: pretty;
   }
 
 :root{
@@ -382,23 +389,35 @@ button{
   top: 102px;
   z-index: 1;
   background-color: var(--bg-color);
+  animation: focusPoint linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 100%;
 }
-.point-focus{
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  left: -15px;
-  top: 102px;
-  z-index: 1;
-  background-color: var(--primary-color);
+
+@keyframes focusPoint {
+  0% {
+    transform: scale(1);
+    border: 1px solid var(--secondary-color);
+    background-color: var(--bg-color);
+  }
+  50% {
+    transform: scale(2);
+    background-color: var(--primary-color);
+    border: none;
+  }
+  100%{
+    transform: scale(1);
+    border: 1px solid var(--secondary-color);
+    background-color: var(--bg-color);
+  }
+  
 }
 
 .timeline{
   content: "";
   position: absolute;
   width: 4px;
-  height: 100%;
+  height: calc(var(--scroll) /1.15) ;
   background: rgb(22,24,26);
   background: linear-gradient(0deg, rgba(22,24,26,0) 0%, rgba(48,64,0,1) 20%, rgba(48,64,0,1) 50%, rgba(48,64,0,1) 80%, rgba(22,24,26,0) 100%);
   top: 0;
